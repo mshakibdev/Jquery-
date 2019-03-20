@@ -47,8 +47,64 @@ $(document).ready(function() {
 // for a specific element
 $(document).ready(function() {
     $(".class2:first").click(function() {
-        console.log("Only first one is clicked");
+        // console.log("Only first one is clicked");
 
+    });
+
+});
+
+$("document").ready(function() {
+    $("tr:odd").css("background-color", "#80E4F6");
+});
+
+$(document).ready(function() {
+    $("p.class2").click(function() {
+        //console.log("hello");
+
+    });
+});
+
+$(document).ready(function() {
+    $(":button").click(function() {
+        //console.log("button is clicked!");
+
+    });
+    $(":input").click(function() {
+        //console.log("Input is clicked!");
+
+    });
+});
+
+$(document).ready(function() {
+
+    $("p:contains(B)").css("background-color", "#66EF96");
+    $("p:contains(p)").css("color", "#890DF0");
+});
+
+$(document).ready(function() {
+    var title = $("div").attr("title");
+    // console.log(title);
+
+});
+
+
+$(document).ready(function() {
+    $("#changedivstitle").click(function() {
+        //$("div").attr("title", "new");
+
+    });
+});
+
+
+//with call-back function
+
+$(document).ready(function() {
+    $("#changedivstitle").click(function() {
+        $("div").attr("title", function(index, originalValue) {
+            // console.log(index);
+            //console.log(originalValue);
+            return 100 + index;
+        });
     });
 
 });
